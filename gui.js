@@ -32,6 +32,48 @@ function app(people){
 
 function searchByTraits(people,height,weight,eyeColor,occupation)
 {
+<<<<<<< HEAD
+  var results = 0
+ return results = people.filter(function(el){
+ if ((height && height !== el.height) && (weight && weight !== el.weight) && (eyeColor && eyeColor !== el.eyeColor) && (occupation && occupation !== el.occupation)){
+  return false;
+}
+  else{
+    return true;
+  }
+})
+ displayResults(results, people);
+}
+
+function displayResults(results, people){
+  var display = choices.map(function(el){
+    return el.id + ": " + el.firstName + " " + el.lastName;
+  })
+  var userAnswer = prompt("Enter the id of your person: " + display + "Type 'quit' to go back to the start");
+  switch (userAnswer){
+    case'el.id':
+    mainMenu(el.id, people);
+    break;
+    case 'quit':
+    app(people);
+    break;
+    default:
+    alert("Please enter an id or enter 'quit' ");
+    displayResults(results, people);
+    break;
+  }
+}
+
+
+function filterHeight (people, height)
+{
+  var result = [matchedHeight];
+  var matchedHeight = people.filter(function(el){
+    if (el.height === height){
+      return true;
+    }
+  })
+=======
  var result = [filterTraits];
  var filterTraits = people.filter(function(el){
  if (el.height === height && el.weight === weight && el.eyeColor === eyeColor && occupation === el.occupation){
@@ -42,10 +84,16 @@ function searchByTraits(people,height,weight,eyeColor,occupation)
 })
 prompt("No matches found. Please try again")
 getTraits(people);
+>>>>>>> 6c2d0c499f73e9aaf3f943b5e1b4e837559c97d8
 }
 
 
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 6c2d0c499f73e9aaf3f943b5e1b4e837559c97d8
 // list of people with trait, people found are listed in prompts one by one, type "found" once you would like to carry that person to the main menu function
 
 //function filterTraits(height, weight, eyeColor, occupation, age)
@@ -175,8 +223,13 @@ function getDescendants(person, people, descendants = [])
 }
 
 function searchByHeight(people){
+<<<<<<< HEAD
+  var height = prompt("How tall is the person in inches? Search or enter nothing to search the next parameter");
+  if (height === ""){
+=======
   var height = prompt("How tall is the person in inches? Search or type 'pass' to search the next parameter");
   if (height === "pass"){
+>>>>>>> 6c2d0c499f73e9aaf3f943b5e1b4e837559c97d8
     return height
     searchByWeight();
   }
@@ -191,8 +244,13 @@ function searchByHeight(people){
 }
 
 function searchByWeight(people){
+<<<<<<< HEAD
+  var weight = prompt("How much does the person weigh in pounds? Search or enter nothing to search the next parameter");
+  if (weight === ""){
+=======
   var weight = prompt("How much does the person weigh in pounds? Search or type 'pass' to search the next parameter");
   if (weight === "pass"){
+>>>>>>> 6c2d0c499f73e9aaf3f943b5e1b4e837559c97d8
     return weight
     searchByEyeColor();
   }
@@ -206,8 +264,13 @@ function searchByWeight(people){
   }
 }
 function searchByEyeColor(people){
+<<<<<<< HEAD
+  var eyeColor = prompt("What is the person's eye color? Search or enter nothing to search the next parameter");
+  if (eyeColor === ""){
+=======
   var eyeColor = prompt("What is the person's eye color? Search or type 'pass' to search the next parameter");
   if (eyeColor === "pass"){
+>>>>>>> 6c2d0c499f73e9aaf3f943b5e1b4e837559c97d8
     return eyeColor
     searchByOccupation();
   }  
@@ -220,8 +283,13 @@ function searchByEyeColor(people){
   }
 }
   function searchByOccupation(people){
+<<<<<<< HEAD
+    var occupation = prompt("What is the person's occupation? Search or enter nothing if you don't know");
+    if (occupation === ""){
+=======
     var occupation = prompt("What is the person's occupation? Search or type 'pass' if you don't know");
     if (occupation === "pass"){
+>>>>>>> 6c2d0c499f73e9aaf3f943b5e1b4e837559c97d8
       return occupation;
     }
     else if (occupation === "programmer" || "assistant" || "landscaper" || "nurse" || "student" || "architect" || "doctor" || "politician"){
@@ -264,8 +332,11 @@ function displayPerson(person){
   // TODO: finish getting the rest of the information to display
   alert(personInfo);
 }
+<<<<<<< HEAD
+=======
 
 // helper function to pass into promptFor to validate yes/no answers
 function yesNo(input){
   return input.toLowerCase() == "yes" || input.toLowerCase() == "no";
 }
+>>>>>>> 6c2d0c499f73e9aaf3f943b5e1b4e837559c97d8
